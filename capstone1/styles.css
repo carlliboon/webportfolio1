@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nav-bar-bg-color,
+#landing,
+#tools,
+#projects,
+#contact {
+  background-color: rgb(22, 22, 22);
+}
+
+.nav-link {
+  color: whitesmoke;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: hsl(204, 100%, 39%);
+}
+
+.project-img {
+  width: 30em;
+  height: 30em;
+}
+
+#my_image {
+  height: 100vh;
+}
+
+#landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.info {
+  z-index: 2; /* Ensures info div remains on top */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50rem;
+  gap: 1em;
+  margin-bottom: 5em;
+}
+
+.ctc-btn {
+  background-color: hsl(204, 100%, 39%);
+  color: whitesmoke;
+  border: none;
+}
+
+.ctc-btn:hover {
+  background-color: hsl(204, 100%, 60%);
+  color: whitesmoke;
+}
+
+.info p {
+  text-align: left;
+  font-size: 18px;
+}
+
+.info h1 {
+  color: hsl(204, 100%, 60%);
+  font-size: 4em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #landing {
+    display: block; /* Stack elements vertically */
+    position: relative;
+  }
+
+  #my_image {
+    display: none; /* Hide the img element on smaller screens */
+  }
+
+  #landing:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("my_image_bg (1).png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+  }
+
+  .info {
+    position: relative;
+    align-items: center;
+    padding: 5rem;
+    margin-bottom: 0;
+  }
+  .info p {
+    text-align: center;
+  }
+}
+
+.tools-text {
+  font-size: 4em;
+}
+
+#bootstrap {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.skills-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mern {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.mern-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: end;
+}
+
+@media (max-width: 768px) {
+  .other-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+}
+
+.material-symbols-outlined {
+  color: hsl(204, 100%, 60%);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-content: center;
+    margin: 0 10px;
+  }
+}
+
+.send-message,
+.inputs {
+  margin-top: 3em;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  margin-top: 1em;
+  display: flex;
+  gap: 0.5em;
+}
+
+.input-box {
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+#message {
+  padding-top: 10px;
+  height: 200px;
+}
+
+.btn-modal {
+  position: relative;
+  left: 50px;
+  bottom: 50px;
+}
